@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script>
+			function myFunction() {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("my-demo").innerHTML = this.responseText;
+					}
+				};
+				xhttp.open("GET", "https://4vu0m7om6c.execute-api.us-east-1.amazonaws.com/prod", true);
+				xhttp.send();
+
+			}
+
+		</script>
+	</head>
+<body>
+	<div align="center">
+		<br>
+		<br>
+		<br>
+		<br>
+		<h1>Hello <span id="my-demo">Everyone</span></h1>
+		<button onclick="myFunction()">Click me</button>
+		<br>
+		<img src="https://vdevhosting.s3.amazonaws.com/vishubh.jpg">
+	</div>
+
+	</body>
+</html>
